@@ -1,0 +1,403 @@
+/* =========================================================
+   BASE
+========================================================= */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --primary: #415167;
+  --accent: #C7A17A;
+  --dark: #151D28;
+  --light: #EDF0F5;
+}
+
+/* Чтобы меню справа не перекрывало сайт */
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--light);
+  color: var(--dark);
+  overflow-x: hidden;
+  padding-right: 1px;
+}
+
+/* =========================================================
+   SIDEBAR RIGHT MENU (fixed)
+========================================================= */
+.sidebar-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 100%;
+  background: var(--primary);
+  padding: 300px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 50;
+}
+
+.sidebar-menu ul {
+  list-style: none;
+}
+.sidebar-menu li {
+  margin-bottom: 18px;
+  margin-top: 10px;
+}
+.sidebar-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  opacity: 0.9;
+  transition: .2s;
+}
+.sidebar-menu a:hover {
+  opacity: 1;
+  color: var(--accent);
+}
+
+/* =========================================================
+   MAIN CONTENT SHIFTED LEFT
+========================================================= */
+main {
+  width: calc(100% - 250px);
+}
+
+/* =========================================================
+   HERO BANNER (как оригинал)
+========================================================= */
+
+.hero-logo {
+    position: absolute;
+    top: 25px;
+    left: 40px;
+    font-size: 36px;
+    font-weight: 700;
+    z-index: 20;
+    color: #1d2c3a;
+}
+
+.hero-banner {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: white;
+}
+
+/* Левая белая панель — ФИКС ШИРИНА */
+.hero-left {
+  width: 340px;
+  background: white;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+}
+
+/* Текст */
+.hero-text {
+  margin-left: 85px;
+  margin-top: 340px;
+}
+
+.hero-text__your,
+.hero-text__coffee {
+  font-size: 56px;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1;
+}
+
+.hero-text__personalized {
+  font-size: 64px;
+  font-weight: 900;
+  background: var(--accent);
+  color: white;
+  padding: 1px 22px;
+  display: inline-block;
+  margin: 10px 0;
+  transform: translateX(-15px); /* как оригинал → влезает на фото */
+  white-space: nowrap;
+}
+
+/* Правая часть с фото */
+.hero-right {
+  flex: 1;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-width: 900px; /* как оригинал — картинка не станет узкой */
+}
+/* =========================================================
+   FEATURES SECTION
+========================================================= */
+#features {
+  padding: 120px 100px;
+  background: var(--light);
+  text-align: center;
+}
+
+.features-title {
+  font-weight: 900;
+  font-size: 25px; /* если нужно */
+}
+
+
+#features p {
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+.features-grid {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.feature-item {
+  background: white;
+  padding: 40px 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.feature-item h2 {
+  font-weight: 700;
+  margin: 15px 0;
+  font-size: 20px;
+}
+
+/* Центрующий контейнер */
+#features {
+  padding: 120px 0;                 /* убираем боковые отступы, чтобы было ровно как у revo */
+  background: var(--light);
+  text-align: center;
+
+  max-width: 1200px;                /* фиксированная ширина блока */
+  margin: 0 auto;                   /* ЦЕНТР */
+}
+
+/* Сетка по центру */
+.features-grid {
+  margin-top: 60px;
+  display: flex;                    /* заменяем grid → flex (как у оригинального revo) */
+  justify-content: center;          /* центрируем карточки */
+  gap: 40px;
+  flex-wrap: wrap;                  /* чтобы не ломалось на маленьких экранах */
+}
+
+.feature-item {
+  width: 260px;                     /* фиксированная ширина карточек */
+  background: white;
+  padding: 40px 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+
+#features {
+  padding-left: 300px; /* ширина боковой панели */
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   PRODUCT CARDS
+========================================================= */
+
+
+#coffee {
+  padding: 12px 0;
+  background: var(--light);
+  text-align: center;
+  box-sizing: border-box;
+
+}
+
+.page-content {
+  margin-left: 300px;   /* ширина боковой панели */
+  padding: 20px 40px;
+  box-sizing: border-box;
+}
+
+
+.products-grid {
+  margin-top: 50px;
+  display: grid;
+  gap: 70px;
+  justify-content: center;
+
+  grid-template-columns: repeat(auto-fit, 400px); /*grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));*/
+}
+
+
+.product-card {
+  width: 400px;
+  max-width: 600px;        /* 2 карточки помещаются в 1200px */
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 25px 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  height: 200px;
+  gap: 15px;
+}
+
+.product-card img {
+  width: 150px;        /* ровно как в оригинале */
+  height: auto;
+}
+
+.product-info {
+  text-align: left;
+  flex: 1;
+}
+
+.product-info p,
+.product-info h3 {
+  line-height: 1.6; /* можешь поставить 1.5 если хочешь чуть больше */
+}
+
+.more-btn {
+  background: #ffffff !important;
+  color: #A87B3E !important;
+  border: 2px solid #A87B3E !important;
+  border-radius: 20px;
+  padding: 6px 16px;
+  font-weight: 600;
+}
+
+.more-btn:hover {
+  background: #A87B3E !important;
+  color: #ffffff !important;
+}
+
+
+.price {
+  color: var(--accent);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+
+.product-title {
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.desc {
+  opacity: 0.7;
+  margin-bottom: 12px;
+}
+
+.buttons {
+  display: flex;
+  gap: 5px;
+  margin-top: 15px;
+}
+
+.buttons button {
+  padding: 10px 10px;
+  border-radius: 20px;
+  border: none;
+  background: var(--accent);
+  color: white;
+  cursor: pointer;
+}
+
+.buttons button:hover {
+  background: var(--accent);
+}
+
+
+
+
+/* =========================================================
+   GIFTSET
+========================================================= */
+#giftset {
+  padding: 120px 100px;
+}
+
+.giftset-container {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  margin-top: 40px;
+}
+
+.giftset-info .price {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.features {
+  margin-top: 20px;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+#giftset {
+  padding-left: 300px; /* ширина боковой панели */
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   COMBO
+========================================================= */
+#combo {
+  padding: 120px 100px;
+  padding-left: 300px; /* ширина боковой панели */
+  box-sizing: border-box;
+}
+
+.combo-grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.combo-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+footer {
+  padding: 40px;
+  background: var(--primary);
+  text-align: center;
+  color: white;
+  margin-top: 40px;
+}
+
+
