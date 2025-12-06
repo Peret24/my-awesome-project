@@ -1,122 +1,260 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <title>revo COFFEE</title>
+    <meta charset="UTF-8">
+    <title>revo COFFEE</title>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
+
 <body>
 
-  <header>
-    <h1>revo</h1>
-    <nav>
+<!-- ===================== HEADER ===================== -->
+<header class="header">
+
+    <!-- Боковое меню справа -->
+    <nav class="sidebar-menu">
+      <div class="cart-icon">
+        <img src="assets/иконки/shopping-cart-3.png" alt="Корзина" width="24" height="24">
+      </div>
       <ul>
-        <li><a href="#home">ГЛАВНАЯ</a></li>
-        <li><a href="#coffee1">КОФЕ 1</a></li>
-        <li><a href="#coffee2">КОФЕ 2</a></li>
-        <li><a href="#combo">КОМБО</a></li>
-        <li><a href="#giftset">ПОДАРОЧНЫЙ НАБОР</a></li>
+        <li><a href="#home" class="active">ГЛАВНАЯ</a></li>
+        <li><a href="#coffee">КОФЕ</a></li>
+        <li><a href="#phin">ФИН</a></li>
+        <li><a href="#combo">НАБОРЫ КОФЕ</a></li>
+        <li><a href="#giftset">ПОДАРОЧНЫЕ НАБОРЫ</a></li>
         <li><a href="#contact">КОНТАКТЫ</a></li>
       </ul>
     </nav>
-    <a href="#personalized">Песнь светлого будущего</a>
-  </header>
+</header>
 
-  <main>
-    <section id="home">
-      <h1>revo COFFEE</h1>
-      <p>Песнь светлого будущего</p>
-      <p>КОФЕ</p>
-      <p>чистосердечное признание облегчает душу</p>
 
-      <div>
-        <h2>Род</h2>
-        <p>Для современного мира высокое качество позиционных исследований не оставляет шанса для своевременного выполнения сверхзадачи.</p>
+
+<!-- ===================== MAIN ===================== -->
+<main>
+
+<!-- ===================== HERO BANNER (исправлено) ===================== -->
+<section class="hero-banner" id="home">
+
+    <div class="hero-logo">revo</div>
+
+    <!-- Левый белый блок -->
+    <div class="hero-left">
+        <div class="hero-text">
+            <div class="hero-text__your">YOUR</div>
+            <div class="hero-text__personalized">PERSONALIZED</div>
+            <div class="hero-text__coffee">COFFEE</div>
+        </div>
+    </div>
+
+    <!-- Фото -->
+    <div class="hero-right">
+        <img src="assets/Баннер.png" alt="revo — ваш персонализированный кофе">
+    </div>
+
+</section>
+
+
+
+<!-- ===================== ПОСЛЕ БАННЕРА ===================== -->
+<section id="features">
+    <p>Your Personalized Coffee</p>
+    <h2 class="features-title">СОЗДАЙ СВОЙ КОФЕ С НУЛЯ</h2>
+
+    <div class="features-grid">
+
+      <div class="feature-item">
+        <img src="assets/иконки/ic.png" alt="Источник" width="60" height="60">
+        <h2>ПРОИСХОЖДЕНИЕ</h2>
+        <p>Прототип нового сервиса — это как детский заливистый смех</p>
       </div>
 
-      <div>
-        <h2>Качество</h2>
-        <p>Таким образом, дальнейшее развитие различных форм деятельности является качественно новой ступенью укрепления моральных ценностей.</p>
+      <div class="feature-item">
+        <img src="assets/иконки/IC (1).png" alt="Качество" width="60" height="60">
+        <h2>КАЧЕСТВО</h2>
+        <p>Курс на социально-ориентированный национальный проект стал нашим флагом в борьбе с ложью</p>
       </div>
 
-      <div>
-        <h2>Бобы</h2>
-        <p>А также независимые государства являются только методом политического участия и рассмотрены исключительно в разрезе маркетинговых и финансовых предпосылок.</p>
+      <div class="feature-item">
+        <img src="assets/иконки/IC (2).png" alt="Виды зёрен" width="60" height="60">
+        <h2>РАЗНОВИДНОСТЬ ЗЕРЕН</h2>
+        <p>Близость к государственным границам станет частью наших традиций</p>
       </div>
 
-      <div>
-        <h2>Казармы</h2>
-        <p>Как принято считать, явные признаки победы институционализации указаны как претенденты на роль ключевых факторов.</p>
+      <div class="feature-item">
+        <img src="assets/иконки/IC (3).png" alt="Заваривание" width="60" height="60">
+        <h2>ПРИГОТОВЛЕНИЕ</h2>
+        <p>Базовый вектор развития определил дальнейшее развитие</p>
       </div>
-    </section>
 
-    <section id="coffee">
-      <h2>Звук клавиш печатной машинки</h2>
-      <p>почему жизнь прекрасна</p>
+    </div>
+</section>
 
-      <div>
-        <h3>REVO Утро</h3>
-        <p>99 000 руб</p>
-        <p>Внезапно, младая поросль матереет</p>
-        <button>КУПИТЬ СЕЙЧАС</button>
+
+
+<!-- ===================== CONTENT WRAPPER ===================== -->
+<div class="page-content">
+
+<!-- ===================== COFFEE ===================== -->
+<section id="coffee"  class="coffee-section">
+  <div class="coffee-left"></div>
+  <div class="coffee-content">
+  <h2>Выберите свой вкус</h2>
+  <p>СТАНДАРТ ВКУСА</p>
+  <div class="products-grid">
+
+    <div class="product-card">
+      <img src="assets/IMAGE.png" alt="REVO Morning" width="150">
+      <div class="product-info">
+        <p class="price">99.000 руб</p>
+        <h3>REVO Morning</h3>
+        <p>Крепость духа бодрит</p>
+        <div class="buttons">
+          <button>КУПИТЬ</button>
+          <button class="more-btn">ПОДРОБНЕЕ</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="assets/IMAGE (2).png" alt="REVO Everyday" width="150">
+      <div class="product-info">
+        <p class="price">85.000 руб</p>
+        <h3>REVO Everyday</h3>
+        <p>Воистину радостный звук</p>
+        <div class="buttons">
+          <button>КУПИТЬ</button>
+          <button class="more-btn">ПОДРОБНЕЕ</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="assets/image (1).png" alt="REVO Origin" width="150">
+      <div class="product-info">
+        <p class="price">139.000 руб</p>
+        <h3>REVO Origin</h3>
+        <p>Песнь светлого будущего</p>
+        <div class="buttons">
+          <button>КУПИТЬ</button>
+          <button class="more-btn">ПОДРОБНЕЕ</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="assets/IMAGE (3).png" alt="REVO Rich" width="150">
+      <div class="product-info">
+        <p class="price">75.000 руб</p>
+        <h3>REVO Rich</h3>
+        <p>Да, помыслы поколения чисты</p>
+        <div class="buttons">
+          <button>КУПИТЬ</button>
+          <button class="more-btn">ПОДРОБНЕЕ</button>
+        </div>
+      </div>
+    </div>
+    </div>
+
+  </div>
+</section>
+
+</div> <!-- END page-content -->
+
+
+<!-- ===================== GIFTSET ===================== -->
+<section id="giftset">
+  <h2>Лучший подарок для лучшего друга</h2>
+  <h3>ПОДАРОЧНЫЙ НАБОР</h3>
+
+  <div class="giftset-container">
+
+    <img src="assets/pr-0018-r.png" alt="Giftset 'Cà phê phin Việt Nam'" width="300">
+
+    <div class="giftset-info">
+      <p class="price">285.000 руб</p>
+      <h3>Граница обучения кадров продолжает удивлять</h3>
+      <p>Вот вам яркий пример современных тенденций...</p>
+
+      <div class="features">
+        <div class="feature">
+          <img src="assets/иконки/IC_coffee.png" width="24">
+          <span>Сорт зёрен<br><strong>Смесь отборной Робусты</strong></span>
+        </div>
+        <div class="feature">
+          <img src="assets/иконки/IC_Mountain.png" width="24">
+          <span>Высота произрастания<br><strong>700 - 800 м</strong></span>
+        </div>
+      </div>
+
+      <div class="buttons">
+        <button>КУПИТЬ</button>
         <button>ПОДРОБНЕЕ</button>
       </div>
+    </div>
 
-      <div>
-        <h3>REVO Повседневный</h3>
-        <p>85 000 руб</p>
-        <p>Старческий скрип Амстердама</p>
-        <button>КУПИТЬ СЕЙЧАС</button>
-        <button>ПОДРОБНЕЕ</button>
+  </div>
+</section>
+
+
+
+<!-- ===================== COMBO ===================== -->
+<section id="combo">
+  <h2>Ваш уникальный кофе</h2>
+  <h3>НАБОРЫ ФИН-ФИЛЬТРОВ</h3>
+
+  <div class="combo-grid">
+
+    <div class="combo-card">
+      <img src="assets/image (6).png" width="250">
+      <div class="combo-info">
+        <p class="price"><span class="old-price">155.000 руб</span></p>
+        <h3>Combo Revo RICH</h3>
+        <p>Благородные стремления не спасут...</p>
+        <div class="buttons">
+          <button>КУПИТЬ</button>
+          <button>ПОДРОБНЕЕ</button>
+        </div>
       </div>
+    </div>
 
-      <div>
-        <h3>REVO Оригинальный</h3>
-        <p>139 000 руб</p>
-        <p>Консультация с широким активом</p>
-        <button>КУПИТЬ СЕЙЧАС</button>
-        <button>ПОДРОБНЕЕ</button>
+    <div class="combo-card">
+      <img src="assets/image (7).png" width="250">
+      <div class="combo-info">
+        <p class="price"><span class="old-price">165.000 руб</span></p>
+        <h3>Combo Revo Everyday</h3>
+        <p>Давайте разбираться...</p>
+        <div class="buttons">
+          <button>КУПИТЬ</button>
+          <button>ПОДРОБНЕЕ</button>
+        </div>
       </div>
+    </div>
 
-      <div>
-        <h3>REVO Насыщенный</h3>
-        <p>75 000 руб</p>
-        <p>Треск разлетающихся скреп</p>
-        <button>КУПИТЬ СЕЙЧАС</button>
-        <button>ПОДРОБНЕЕ</button>
+    <div class="combo-card">
+      <img src="assets/image (8).png" width="250">
+      <div class="combo-info">
+        <p class="price"><span class="old-price">260.000 руб</span></p>
+        <h3>Combo Revo Honey</h3>
+        <p>Никто не вправе осуждать...</p>
+        <div class="buttons">
+          <button>КУПИТЬ</button>
+          <button>ПОДРОБНЕЕ</button>
+        </div>
       </div>
-    </section>
-    <section id="giftset">
-      <h2>Свободу слова не задушить</h2>
-      <h3>ПОДАРОЧНЫЙ НАБОР</h3>
-      <p>285 000 руб</p>
-      <p>Значимость этих проблем настолько очевидна, что современная методология разработки позволяет выполнить важные задания по разработке направлений прогрессивного развития.</p>
+    </div>
 
-      <ul>
-        <li>Только обереги никого не защитили</li>
-        <li>Мелочь, а приятно</li>
-        <li>барабанный бой</li>
-        <li>700–800 мл</li>
-      </ul>
+  </div>
+</section>
 
-      <button>КУПИТЬ СЕЙЧАС</button>
-      <button>ПОДРОБНЕЕ</button>
-    </section>
 
-    <section id="combo">
-      <h2>Жизнь прекрасна</h2>
-      <h3>КОМБО</h3>
-      <ul>
-        <li>revo</li>
-        <li>revoQ</li>
-        <li>revo2</li>
-      </ul>
-    </section>
 
-  </main>
-  <footer>
-    <p>Объем доходов населения сократился</p>
-  </footer>
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <p>© Никто не вправе осуждать трубный призыв</p>
+</footer>
 
+</main>
 
 </body>
 </html>
+
