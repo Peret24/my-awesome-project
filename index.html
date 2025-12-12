@@ -8,36 +8,27 @@
 
 <body>
 
-<!-- ===================== HEADER ===================== -->
-<header class="header">
-
-    <!-- Боковое меню справа -->
-    <nav class="sidebar-menu">
-      <div class="cart-icon">
-        <img src="assets/иконки/shopping-cart-3.png" alt="Корзина" width="24" height="24">
-      </div>
-      <ul>
-        <li><a href="#home" class="active">ГЛАВНАЯ</a></li>
-        <li><a href="#coffee">КОФЕ</a></li>
-        <li><a href="#phin">ФИН</a></li>
-        <li><a href="#combo">НАБОРЫ КОФЕ</a></li>
-        <li><a href="#giftset">ПОДАРОЧНЫЕ НАБОРЫ</a></li>
-        <li><a href="#contact">КОНТАКТЫ</a></li>
-      </ul>
-    </nav>
-</header>
-
-
-
-<!-- ===================== MAIN ===================== -->
-<main>
-
-<!-- ===================== HERO BANNER (исправлено) ===================== -->
 <section class="hero-banner" id="home">
 
-    <div class="hero-logo">revo</div>
+    <!-- Боковое меню внутри баннера -->
+    <nav class="sidebar-menu">
+        <div class="cart-icon">
+            <img src="assets/иконки/shopping-cart-3.png" alt="Корзина" width="24" height="24">
+        </div>
+        <ul>
+            <li><a href="#home" class="active">ГЛАВНАЯ</a></li>
+            <li><a href="#coffee">КОФЕ</a></li>
+            <li><a href="#phin">ФИН</a></li>
+            <li><a href="#combo">НАБОРЫ КОФЕ</a></li>
+            <li><a href="#giftset">ПОДАРОЧНЫЕ НАБОРЫ</a></li>
+            <li><a href="#contact">КОНТАКТЫ</a></li>
+        </ul>
+    </nav>
 
-    <!-- Левый белый блок -->
+    <div class="hero-logo">
+        <img src="assets/LOGO.png" alt="Логотип" width="70" height="27">
+    </div>
+
     <div class="hero-left">
         <div class="hero-text">
             <div class="hero-text__your">YOUR</div>
@@ -46,7 +37,6 @@
         </div>
     </div>
 
-    <!-- Фото -->
     <div class="hero-right">
         <img src="assets/Баннер.png" alt="revo — ваш персонализированный кофе">
     </div>
@@ -92,73 +82,70 @@
 
 
 <!-- ===================== CONTENT WRAPPER ===================== -->
-<div class="page-content">
+<section id="coffee" class="coffee-section">
+  <div class="page-content">
 
-<!-- ===================== COFFEE ===================== -->
-<section id="coffee"  class="coffee-section">
-  <div class="coffee-left"></div>
-  <div class="coffee-content">
-  <h2>Выберите свой вкус</h2>
-  <p>СТАНДАРТ ВКУСА</p>
-  <div class="products-grid">
+    <h2>Выберите свой вкус</h2>
+    <p>СТАНДАРТ ВКУСА</p>
 
-    <div class="product-card">
-      <img src="assets/IMAGE.png" alt="REVO Morning" width="150">
-      <div class="product-info">
-        <p class="price">99.000 руб</p>
-        <h3>REVO Morning</h3>
-        <p>Крепость духа бодрит</p>
-        <div class="buttons">
-          <button>КУПИТЬ</button>
-          <button class="more-btn">ПОДРОБНЕЕ</button>
+    <div class="products-grid">
+
+      <div class="product-card">
+        <img src="assets/IMAGE.png" alt="REVO Morning">
+        <div class="product-info">
+          <p class="price">99.000 руб</p>
+          <h3>REVO Morning</h3>
+          <p>Крепость духа бодрит</p>
+          <div class="buttons">
+            <button>КУПИТЬ</button>
+            <button class="more-btn">ПОДРОБНЕЕ</button>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="product-card">
-      <img src="assets/IMAGE (2).png" alt="REVO Everyday" width="150">
-      <div class="product-info">
-        <p class="price">85.000 руб</p>
-        <h3>REVO Everyday</h3>
-        <p>Воистину радостный звук</p>
-        <div class="buttons">
-          <button>КУПИТЬ</button>
-          <button class="more-btn">ПОДРОБНЕЕ</button>
+      <div class="product-card">
+        <img src="assets/IMAGE (2).png" alt="REVO Everyday">
+        <div class="product-info">
+          <p class="price">85.000 руб</p>
+          <h3>REVO Everyday</h3>
+          <p>Воистину радостный звук</p>
+          <div class="buttons">
+            <button>КУПИТЬ</button>
+            <button class="more-btn">ПОДРОБНЕЕ</button>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="product-card">
-      <img src="assets/image (1).png" alt="REVO Origin" width="150">
-      <div class="product-info">
-        <p class="price">139.000 руб</p>
-        <h3>REVO Origin</h3>
-        <p>Песнь светлого будущего</p>
-        <div class="buttons">
-          <button>КУПИТЬ</button>
-          <button class="more-btn">ПОДРОБНЕЕ</button>
+      <div class="product-card">
+        <img src="assets/image (1).png" alt="REVO Origin">
+        <div class="product-info">
+          <p class="price">139.000 руб</p>
+          <h3>REVO Origin</h3>
+          <p>Песнь светлого будущего</p>
+          <div class="buttons">
+            <button>КУПИТЬ</button>
+            <button class="more-btn">ПОДРОБНЕЕ</button>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="product-card">
-      <img src="assets/IMAGE (3).png" alt="REVO Rich" width="150">
-      <div class="product-info">
-        <p class="price">75.000 руб</p>
-        <h3>REVO Rich</h3>
-        <p>Да, помыслы поколения чисты</p>
-        <div class="buttons">
-          <button>КУПИТЬ</button>
-          <button class="more-btn">ПОДРОБНЕЕ</button>
+      <div class="product-card">
+        <img src="assets/IMAGE (3).png" alt="REVO Rich">
+        <div class="product-info">
+          <p class="price">75.000 руб</p>
+          <h3>REVO Rich</h3>
+          <p>Да, помыслы поколения чисты</p>
+          <div class="buttons">
+            <button>КУПИТЬ</button>
+            <button class="more-btn">ПОДРОБНЕЕ</button>
+          </div>
         </div>
       </div>
-    </div>
-    </div>
 
+    </div>
   </div>
 </section>
-
-</div> <!-- END page-content -->
+ <!-- END page-content -->
 
 
 <!-- ===================== GIFTSET ===================== -->
@@ -173,7 +160,7 @@
     <div class="giftset-info">
       <p class="price">285.000 руб</p>
       <h3>Граница обучения кадров продолжает удивлять</h3>
-      <p>Вот вам яркий пример современных тенденций...</p>
+      <p>А также ключевые особенности структуры проекта формируют глобальную экономическую сеть и при этом — функционально разнесены на независимые элементы. Повседневная практика показывает, что постоянный количественный рост и сфера нашей активности создаёт предпосылки для экономической целесообразности принимаемых решений.</p>
 
       <div class="features">
         <div class="feature">
@@ -197,19 +184,18 @@
 
 
 
-<!-- ===================== COMBO ===================== -->
 <section id="combo">
-  <h2>Ваш уникальный кофе</h2>
-  <h3>НАБОРЫ ФИН-ФИЛЬТРОВ</h3>
+  <h5>Your personalized coffee</h5>
+  <h2>НАБОРЫ ФИН-ФИЛЬТРОВ</h2>
 
-  <div class="combo-grid">
+  <div class="combo-wrapper">
 
     <div class="combo-card">
-      <img src="assets/image (6).png" width="250">
+      <img src="assets/image (6).png" alt="">
       <div class="combo-info">
-        <p class="price"><span class="old-price">155.000 руб</span></p>
-        <h3>Combo Revo RICH</h3>
-        <p>Благородные стремления не спасут...</p>
+        <p class="price">147.000 руб</p>
+        <h3>Combo Revo Rich</h3>
+        <p>Стремления не спасут...</p>
         <div class="buttons">
           <button>КУПИТЬ</button>
           <button>ПОДРОБНЕЕ</button>
@@ -218,9 +204,9 @@
     </div>
 
     <div class="combo-card">
-      <img src="assets/image (7).png" width="250">
+      <img src="assets/image (7).png" alt="">
       <div class="combo-info">
-        <p class="price"><span class="old-price">165.000 руб</span></p>
+        <p class="price">156.000 руб</p>
         <h3>Combo Revo Everyday</h3>
         <p>Давайте разбираться...</p>
         <div class="buttons">
@@ -231,9 +217,9 @@
     </div>
 
     <div class="combo-card">
-      <img src="assets/image (8).png" width="250">
+      <img src="assets/image (8).png" alt="">
       <div class="combo-info">
-        <p class="price"><span class="old-price">260.000 руб</span></p>
+        <p class="price">275.000 руб</p>
         <h3>Combo Revo Honey</h3>
         <p>Никто не вправе осуждать...</p>
         <div class="buttons">

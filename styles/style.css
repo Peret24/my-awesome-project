@@ -1,6 +1,3 @@
-/* =========================================================
-   BASE
-========================================================= */
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -16,7 +13,6 @@
   --light: #EDF0F5;
 }
 
-/* Чтобы меню справа не перекрывало сайт */
 body {
   font-family: 'Inter', sans-serif;
   background: var(--light);
@@ -25,83 +21,69 @@ body {
   padding-right: 1px;
 }
 
-/* =========================================================
-   SIDEBAR RIGHT MENU (fixed)
-========================================================= */
+
+
+
+/* sidebar */
 .sidebar-menu {
   position: absolute;
-  top: 0;
   right: 0;
-  width: 250px;
+  top: 0;
   height: 100%;
+  width: 250px;
   background: var(--primary);
-  padding: 300px 25px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  z-index: 50;
+  z-index: 5;
+  padding: 40px 0 0 15px;
 }
 
 .sidebar-menu ul {
+  padding-top: 140px;
   list-style: none;
 }
+
 .sidebar-menu li {
-  margin-bottom: 18px;
-  margin-top: 10px;
+  margin: 10px 0 18px;
 }
+
 .sidebar-menu a {
-  color: white;
+  color: var(--light);
   text-decoration: none;
   font-size: 16px;
   opacity: 0.9;
   transition: .2s;
 }
+
 .sidebar-menu a:hover {
   opacity: 1;
   color: var(--accent);
 }
 
-/* =========================================================
-   MAIN CONTENT SHIFTED LEFT
-========================================================= */
-main {
-  width: calc(100% - 250px);
-}
-
-/* =========================================================
-   HERO BANNER (как оригинал)
-========================================================= */
-
+/* hero */
 .hero-logo {
-    position: absolute;
-    top: 25px;
-    left: 40px;
-    font-size: 36px;
-    font-weight: 700;
-    z-index: 20;
-    color: #1d2c3a;
+  position: absolute;
+  top: 25px;
+  left: 40px;
+  font-size: 50px;
+  z-index: 40;
 }
 
 .hero-banner {
-  position: relative;
   display: flex;
   width: 100%;
   height: 100vh;
+  background: var(--light);
   overflow: hidden;
-  background: white;
+  position: relative;
 }
 
-/* Левая белая панель — ФИКС ШИРИНА */
 .hero-left {
   width: 340px;
-  background: white;
-  position: relative;
-  z-index: 10;
+  background: var(--light);
   display: flex;
   align-items: center;
+  z-index: 10;
 }
 
-/* Текст */
 .hero-text {
   margin-left: 85px;
   margin-top: 340px;
@@ -119,42 +101,40 @@ main {
   font-size: 64px;
   font-weight: 900;
   background: var(--accent);
-  color: white;
+  color: var(--light);
   padding: 1px 22px;
   display: inline-block;
   margin: 10px 0;
-  transform: translateX(-15px); /* как оригинал → влезает на фото */
+  transform: translateX(-15px);
   white-space: nowrap;
 }
 
-/* Правая часть с фото */
 .hero-right {
   flex: 1;
-  height: 100%;
   overflow: hidden;
-  position: relative;
 }
 
 .hero-right img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  min-width: 900px; /* как оригинал — картинка не станет узкой */
+  min-width: 900px;
 }
-/* =========================================================
-   FEATURES SECTION
-========================================================= */
+
+/* features */
 #features {
-  padding: 120px 100px;
+  padding: 120px 0;
   background: var(--light);
   text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .features-title {
-  font-weight: 900;
-  font-size: 25px; /* если нужно */
+  font-weight: 800;
+  color: var(--primary);
+  font-size: 25px;
 }
-
 
 #features p {
   font-size: 18px;
@@ -163,17 +143,18 @@ main {
 
 .features-grid {
   margin-top: 60px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  justify-content: center;
   gap: 40px;
+  flex-wrap: wrap;
 }
 
 .feature-item {
-  background: white;
+  width: 260px;
+  background: #fff;
   padding: 40px 20px;
   border-radius: 12px;
   box-shadow: 0 3px 12px rgba(0,0,0,0.08);
-  text-align: center;
 }
 
 .feature-item h2 {
@@ -182,87 +163,63 @@ main {
   font-size: 20px;
 }
 
-/* Центрующий контейнер */
-#features {
-  padding: 120px 0;                 /* убираем боковые отступы, чтобы было ровно как у revo */
-  background: var(--light);
-  text-align: center;
-
-  max-width: 1200px;                /* фиксированная ширина блока */
-  margin: 0 auto;                   /* ЦЕНТР */
-}
-
-/* Сетка по центру */
-.features-grid {
-  margin-top: 60px;
-  display: flex;                    /* заменяем grid → flex (как у оригинального revo) */
-  justify-content: center;          /* центрируем карточки */
-  gap: 40px;
-  flex-wrap: wrap;                  /* чтобы не ломалось на маленьких экранах */
-}
-
-.feature-item {
-  width: 260px;                     /* фиксированная ширина карточек */
-  background: white;
-  padding: 40px 20px;
-  border-radius: 12px;
-  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
-  text-align: center;
-}
-
-
-#features {
-  padding-left: 300px; /* ширина боковой панели */
-  box-sizing: border-box;
-}
-
-
-/* =========================================================
-   PRODUCT CARDS
-========================================================= */
-
-
+/* coffee */
 #coffee {
-  padding: 12px 0;
+  position: relative;
+  padding: 80px 0;
   background: var(--light);
-  text-align: center;
-  box-sizing: border-box;
+  overflow: hidden;
+}
 
+#coffee::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 280px;
+  background: var(--primary);
+}
+
+#coffee > * {
+  position: relative;
+  z-index: 1;
 }
 
 .page-content {
-  margin-left: 300px;   /* ширина боковой панели */
-  padding: 20px 40px;
-  box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  text-align: center;
 }
 
+.page-content h2 {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 6px;
+  color: var(--primary);
+}
 
 .products-grid {
-  margin-top: 50px;
+  margin-top: 60px;
   display: grid;
   gap: 70px;
   justify-content: center;
-
-  grid-template-columns: repeat(auto-fit, 400px); /*grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));*/
+  grid-template-columns: repeat(auto-fit, 400px);
 }
 
-
 .product-card {
-  width: 400px;
-  max-width: 600px;        /* 2 карточки помещаются в 1200px */
+  width: 450px;
+  height: 200px;
   display: flex;
+  gap: 15px;
   align-items: center;
-  background: white;
+  background: #fff;
   padding: 25px 20px;
   border-radius: 16px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-  height: 200px;
-  gap: 15px;
 }
 
 .product-card img {
-  width: 150px;        /* ровно как в оригинале */
-  height: auto;
+  width: 150px;
 }
 
 .product-info {
@@ -270,134 +227,174 @@ main {
   flex: 1;
 }
 
-.product-info p,
 .product-info h3 {
-  line-height: 1.6; /* можешь поставить 1.5 если хочешь чуть больше */
+  font-size: 20px;
+  font-weight: 800;
 }
 
-.more-btn {
-  background: #ffffff !important;
-  color: #A87B3E !important;
-  border: 2px solid #A87B3E !important;
-  border-radius: 20px;
-  padding: 6px 16px;
-  font-weight: 600;
+.product-info p {
+  line-height: 1.6;
+  margin-bottom: 10px;
 }
-
-.more-btn:hover {
-  background: #A87B3E !important;
-  color: #ffffff !important;
-}
-
 
 .price {
   color: var(--accent);
   font-weight: 700;
-  margin-bottom: 10px;
-}
-
-
-.product-title {
-  font-size: 20px;
-  font-weight: 800;
   margin-bottom: 6px;
-}
-
-.desc {
-  opacity: 0.7;
-  margin-bottom: 12px;
 }
 
 .buttons {
   display: flex;
-  gap: 5px;
-  margin-top: 15px;
+  gap: 10px;
 }
 
 .buttons button {
-  padding: 10px 10px;
-  border-radius: 20px;
+  padding: 10px 22px;
+  border-radius: 24px;
   border: none;
-  background: var(--accent);
-  color: white;
+  font-weight: 600;
   cursor: pointer;
 }
 
-.buttons button:hover {
+.buttons button:first-child {
   background: var(--accent);
+  color: var(--light);
 }
 
+.buttons button:first-child:hover {
+  background: #fff;
+  color: var(--accent);
+  border: 2px solid var(--accent);
+}
 
+.buttons button:last-child {
+  background: transparent;
+  color: var(--primary);
+}
 
+.buttons button:last-child:hover {
+  color: var(--accent);
+}
 
-/* =========================================================
-   GIFTSET
-========================================================= */
+/* giftset */
 #giftset {
-  padding: 120px 100px;
+  padding: 120px 0;
+  background: var(--light);
+  text-align: center;
+}
+
+#giftset h2 {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+#giftset > h3 {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 60px;
 }
 
 .giftset-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.08);
   display: flex;
+  gap: 50px;
+  padding: 50px;
   align-items: center;
-  gap: 60px;
-  margin-top: 40px;
 }
 
-.giftset-info .price {
-  font-size: 24px;
-  margin-bottom: 20px;
+.giftset-container img {
+  width: 420px;
+}
+
+.giftset-info {
+  text-align: left;
 }
 
 .features {
-  margin-top: 20px;
+  display: flex;
+  gap: 50px;
+  margin: 30px 0 40px;
 }
 
 .feature {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 12px;
+  gap: 12px;
 }
 
-#giftset {
-  padding-left: 300px; /* ширина боковой панели */
-  box-sizing: border-box;
+.feature img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
-/* =========================================================
-   COMBO
-========================================================= */
+
+/* combo */
 #combo {
-  padding: 120px 100px;
-  padding-left: 300px; /* ширина боковой панели */
-  box-sizing: border-box;
+  position: relative;
+  padding: 120px 0;
+  background: var(--light);
+  text-align: center;
+  overflow: hidden;
 }
 
-.combo-grid {
-  margin-top: 40px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+
+#combo::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 100%;
+  background: var(--primary);
+}
+
+.combo-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
   gap: 40px;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
 }
 
 .combo-card {
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-  text-align: center;
-  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+  background: var(--light);
+  border-radius: 16px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+  padding: 20px 25px;
+  width: 290px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
 }
 
-/* =========================================================
-   FOOTER
-========================================================= */
+.combo-card .buttons {
+  margin-top: 20px;
+}
+
+.combo-card img {
+  width: 230px;
+  margin-bottom: 20px;
+}
+
+/* footer */
 footer {
   padding: 40px;
   background: var(--primary);
   text-align: center;
-  color: white;
-  margin-top: 40px;
+  color: var(--light);
 }
+
 
 
