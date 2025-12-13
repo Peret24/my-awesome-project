@@ -234,7 +234,8 @@ body {
   font-size: 28px;
   font-weight: 800;
   margin-bottom: 6px;
-  color: var(--primary);
+  color: var(--dark);
+  z-index: 3;
 }
 
 .products-grid {
@@ -378,11 +379,18 @@ body {
 #combo {
   position: relative;
   padding: 120px 0;
-  background: var(--light);
+  background: white;
   text-align: center;
   overflow: hidden;
 }
-
+#combo h2 {
+  position: relative;
+  z-index: 3;
+}
+#combo h5 {
+  position: relative;
+  z-index: 3;
+}
 
 #combo::after {
   content: "";
@@ -405,7 +413,7 @@ body {
 }
 
 .combo-card {
-  background: var(--light);
+  background: white;
   border-radius: 16px;
   box-shadow: 0 6px 24px rgba(0,0,0,0.08);
   padding: 20px 25px;
