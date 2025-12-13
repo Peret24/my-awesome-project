@@ -1,4 +1,3 @@
-/* ===== RESET ===== */
 * {
   box-sizing: border-box;
 }
@@ -9,19 +8,16 @@ html, body {
   overflow-x: hidden;
 }
 
-/* ===== BURGER ===== */
 .burger {
   display: none;
 }
 
-/* ===== MOBILE ===== */
 @media (max-width: 768px) {
 
   .sidebar-menu {
     display: none !important;
   }
 
-  /* BURGER */
   .burger {
     display: flex;
     position: fixed;
@@ -54,7 +50,6 @@ html, body {
     transform: translateY(-8px) rotate(-45deg);
   }
 
-  /* MOBILE MENU */
   .mobile-menu {
     position: fixed;
     inset: 0;
@@ -91,21 +86,19 @@ html, body {
     font-weight: 600;
   }
 
-  /* HERO */
-.hero-banner {
+  .hero-banner {
     display: flex;
     flex-direction: column;
     width: 100%;
     overflow: hidden;
   }
 
-  /* ===== ТЕКСТ ===== */
   .hero-left {
     width: 100%;
-    height: 38vh;                 /* 🔥 ФИКСИРОВАННАЯ ЗОНА */
+    height: 38vh;
     display: flex;
-    justify-content: center;      /* по горизонтали */
-    align-items: center;          /* по вертикали */
+    justify-content: center;
+    align-items: center;
   }
 
   .hero-text {
@@ -115,7 +108,7 @@ html, body {
   .hero-text__your {
     font-size: 26px;
     line-height: 1.1;
-    margin-top: 50px;
+    margin-top: 30px;
   }
 
   .hero-text__personalized {
@@ -129,8 +122,7 @@ html, body {
     line-height: 1.1;
   }
 
-  /* ===== КАРТИНКА ===== */
-.hero-right {
+  .hero-right {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -139,162 +131,135 @@ html, body {
   }
 
   .hero-right img {
-    max-width: 100%;      /* ❗ НЕ width:100% */
-    max-height: 60vh;     /* ❗ ВОТ ГДЕ МАГИЯ */
+    max-width: 100%;
+    max-height: 60vh;
     height: auto;
     object-fit: contain;
-    margin-top: -40px;    /* ❗ ПОДНИМАЕМ КАРТИНКУ */
+    margin-top: -40px;
     display: block;
   }
-/* ================== COFFEE SECTION ================== */
 
-#coffee {
-  position: relative;
-  overflow: hidden;
-}
+  #coffee {
+    position: relative;
+    overflow: hidden;
+  }
 
-/* фоновая полоса */
-#coffee::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 32%;              /* 👈 уже и стабильнее */
-  height: 100%;
-  background: #3f5166;
-  z-index: 0;
-}
+  #coffee::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 32%;
+    height: 100%;
+    background: #3f5166;
+    z-index: 0;
+  }
 
-/* чтобы контент был поверх */
-#coffee .page-content {
-  position: relative;
-  z-index: 1;
-}
+  #coffee .page-content {
+    position: relative;
+    z-index: 1;
+  }
 
-/* ================== FEATURES ================== */
+  #features {
+    padding-top: 16px;
+    padding-bottom: 40px;
+  }
 
-#features {
-  padding-top: 16px;       /* поднимаем текст */
-  padding-bottom: 40px;
-}
+  #features p {
+    font-size: 16px;
+    margin-bottom: 6px;
+    text-align: center;
+  }
 
-#features p {
-  font-size: 16px;
-  margin-bottom: 6px;
-  text-align: center;
-}
+  .features-title {
+    font-size: 21px;
+    line-height: 1.25;
+    text-align: center;
+  }
 
-.features-title {
-  font-size: 22px;
-  line-height: 1.25;
-  text-align: center;
-}
+  .products-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 24px;
+  }
 
-/* ================== PRODUCTS GRID ================== */
+  .product-card {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 20px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    transform: none;
+    will-change: auto;
+    backface-visibility: visible;
+  }
 
-.products-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px;
-  margin-top: 24px;
-}
+  .product-card img {
+    width: 96px;
+    height: auto;
+    flex-shrink: 0;
+    display: block;
+  }
 
-/* ================== PRODUCT CARD ================== */
+  .product-info {
+    text-align: left;
+  }
 
-.product-card {
-  width: 100%;
-  max-width: 360px;          /* 🔥 КЛЮЧЕВО для iPad */
-  margin: 0 auto;
-  background: #fff;
-  border-radius: 20px;
-  padding: 16px;
+  .product-info .price {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
 
-  display: flex;
-  align-items: center;
-  gap: 14px;
+  .product-info h3 {
+    font-size: 16px;
+    margin: 4px 0;
+  }
 
-  /* ❌ убираем мыло */
-  transform: none;
-  will-change: auto;
-  backface-visibility: visible;
-}
+  .product-info p {
+    font-size: 14px;
+    line-height: 1.4;
+  }
 
-/* ================== IMAGE ================== */
+  .product-info .buttons {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+  }
 
-.product-card img {
-  width: 96px;
-  height: auto;
-  flex-shrink: 0;
-  display: block;
-}
+  .product-info .buttons button {
+    font-size: 13px;
+    padding: 6px 14px;
+    border-radius: 20px;
+  }
 
-/* ================== TEXT ================== */
-
-.product-info {
-  text-align: left;
-}
-
-.product-info .price {
-  font-size: 14px;
-  font-weight: 600;
-  margin-bottom: 4px;
-}
-
-.product-info h3 {
-  font-size: 16px;
-  margin: 4px 0;
-}
-
-.product-info p {
-  font-size: 14px;
-  line-height: 1.4;
-}
-
-/* ================== BUTTONS ================== */
-
-.product-info .buttons {
-  display: flex;
-  gap: 8px;
-  margin-top: 10px;
-}
-
-.product-info .buttons button {
-  font-size: 13px;
-  padding: 6px 14px;
-  border-radius: 20px;
-}
-
-
-/* ===== GIFTSET TITLE ===== */
-
-#giftset {
-  padding-top: 30px;
-  text-align: center;
-}
-
-/* маленький текст */
-#giftset p {
-  font-size: 14px;        /* уменьшаем */
-  margin-bottom: 8px;
-  opacity: 0.8;
-}
-
-/* БОЛЬШОЙ ЗАГОЛОВОК */
-#giftset h3 {
-  font-size: 26px;        /* 🔥 ВОТ ЭТО МАСШТАБ */
-  line-height: 1.2;
-  letter-spacing: 1px;
-  margin-bottom: 24px;
-}
-  /* GIFTSET */
-  .giftset-info .buttons {
-  display: flex;
-  justify-content: center; /* 👉 сдвигаем вправо */
-  gap: 1px;
-}
   #giftset {
     padding: 60px 16px;
     text-align: center;
+  }
+
+  #giftset p {
+    font-size: 14px;
+    margin-bottom: 8px;
+    opacity: 0.8;
+  }
+
+  #giftset h3 {
+    font-size: 26px;
+    line-height: 1.2;
+    letter-spacing: 1px;
+    margin-bottom: 24px;
+  }
+
+  .giftset-info .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1px;
   }
 
   .giftset-container {
@@ -314,12 +279,6 @@ html, body {
 
   .giftset-info {
     width: 100%;
-  }
-
-  .giftset-desc {
-    font-size: 14px;
-    line-height: 1.6;
-    margin-bottom: 24px;
   }
 
   .features {
@@ -351,103 +310,98 @@ html, body {
     display: block;
     font-weight: 600;
   }
-}
 
-/* ===== COMBO (MOBILE) ===== */
+  #combo {
+    padding: 60px 16px;
+  }
 
-#combo {
-  padding: 60px 16px;
-}
+  .combo-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+  }
 
-/* контейнер карточек */
-.combo-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  align-items: center;
-}
+  .combo-card {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 20px;
+    padding: 25px 16px;
+    box-sizing: border-box;
+  }
 
-/* сама карточка */
-.combo-card {
-  width: 100%;
-  max-width: 300px;          /* 🔥 ограничиваем ширину */
-  border-radius: 20px;
-  padding: 25px 16px;        /* уменьшаем внутренние отступы */
-  box-sizing: border-box;
-}
+  .combo-card img {
+    width: 160px;
+    height: auto;
+    margin: 0 auto 15px;
+    display: block;
+  }
 
-/* картинка */
-.combo-card img {
-  width: 160px;              /* 🔥 уменьшаем */
-  height: auto;
-  margin: 0 auto 15px;
-  display: block;
-}
+  .combo-info {
+    text-align: center;
+  }
 
-/* текст */
-.combo-info {
-  text-align: center;
-}
+  .combo-info .price {
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
 
-.combo-info .price {
-  font-size: 16px;
-  margin-bottom: 6px;
-}
+  .combo-info h3 {
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
 
-.combo-info h3 {
-  font-size: 16px;           /* 🔥 меньше заголовок */
-  margin-bottom: 6px;
-}
+  .combo-info p {
+    font-size: 15px;
+    line-height: 1.4;
+    margin-bottom: 14px;
+  }
 
-.combo-info p {
-  font-size: 15x;
-  line-height: 1.4;
-  margin-bottom: 14px;
-}
+  .combo-info .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
 
-/* кнопки */
-.combo-info .buttons {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  flex-wrap: wrap;
-}
+  .combo-info .buttons button {
+    font-size: 14px;
+    padding: 6px 14px;
+    border-radius: 20px;
+  }
 
-.combo-info .buttons button {
-  font-size: 14px;
-  padding: 6px 14px;
-  border-radius: 20px;
-}
-/*button*/
+  #scrollTopBtn {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    border: none;
+    background: #C7A17A;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1005;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: 0.3s ease;
+  }
 
-#scrollTopBtn {
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  border: none;
-  background: #caa472;
-  color: #fff;
-  font-size: 22px;
-  cursor: pointer;
+  #scrollTopBtn.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
 
-  opacity: 0;
-  visibility: hidden;
-  transition: 0.3s;
-  z-index: 999;
-}
-
-/* показываем кнопку */
-#scrollTopBtn.show {
-  opacity: 1;
-  visibility: visible;
-}
-
-/* ховер */
-#scrollTopBtn:hover {
-  background: #b8925f;
+  #scrollTopBtn:active {
+    transform: scale(0.9);
+  }
 }
 
 

@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  /* ===== BURGER MENU ===== */
+  /*BURGER MENU*/
   const burger = document.querySelector('.burger');
   const menu = document.querySelector('.mobile-menu');
 
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ===== SCROLL TO TOP BUTTON ===== */
+  /*BUTTON*/
   const scrollBtn = document.getElementById('scrollTopBtn');
 
   if (scrollBtn) {
