@@ -21,6 +21,7 @@ body {
   padding-right: 1px;
 }
 /* sidebar */
+/* sidebar */
 .sidebar-menu {
   position: absolute;
   right: 0;
@@ -46,7 +47,7 @@ body {
   text-decoration: none;
   font-size: 16px;
   opacity: 0.9;
-  transition: 0.2s;
+  transition: .2s;
 }
 
 .sidebar-menu a:hover {
@@ -54,6 +55,7 @@ body {
   color: var(--accent);
 }
 
+/* hero */
 .hero-logo {
   position: absolute;
   top: 25px;
@@ -65,7 +67,7 @@ body {
 .hero-banner {
   display: flex;
   width: 100%;
-  min-height: 100vh; 
+  height: 100vh;
   background: var(--light);
   overflow: hidden;
   position: relative;
@@ -81,7 +83,7 @@ body {
 
 .hero-text {
   margin-left: 85px;
-  margin-top: 260px; 
+  margin-top: 340px;
 }
 
 .hero-text__your,
@@ -97,7 +99,7 @@ body {
   font-weight: 900;
   background: var(--accent);
   color: var(--light);
-  padding: 2px 22px;
+  padding: 1px 22px;
   display: inline-block;
   margin: 10px 0;
   transform: translateX(-15px);
@@ -107,59 +109,15 @@ body {
 .hero-right {
   flex: 1;
   overflow: hidden;
-  position: relative;
 }
 
 .hero-right img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  min-width: 900px;
 }
 
-/* mobile fix */
-
-@media (max-width: 768px) {
-
-  .sidebar-menu {
-    display: none; 
-  }
-
-  .hero-banner {
-    flex-direction: column;
-    min-height: auto;
-  }
-
-  .hero-left {
-    width: 100%;
-    align-items: flex-start;
-  }
-
-  .hero-text {
-    margin: 0;
-    padding: 40px 20px;
-  }
-
-  .hero-text__your,
-  .hero-text__coffee {
-    font-size: 36px;
-  }
-
-  .hero-text__personalized {
-    font-size: 40px;
-    transform: none;
-  }
-
-  .hero-right {
-    height: 300px; 
-  }
-
-  .hero-right img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    min-width: 0;
-  }
-}
 /* features */
 #features {
   padding: 120px 0;
@@ -379,7 +337,7 @@ body {
 #combo {
   position: relative;
   padding: 120px 0;
-  background: white;
+  background: var(--light);
   text-align: center;
   overflow: hidden;
 }
